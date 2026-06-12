@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚔️ نظام المحارب المخضرم</title>
+<title>⚔️ المحارب المخضرم</title>
 
 <style>
 *{
@@ -13,30 +13,15 @@ box-sizing:border-box;
 font-family:Tahoma, Arial;
 }
 
-/* VIDEO BACKGROUND */
-#bg-video{
-position:fixed;
-right:0;
-bottom:0;
-min-width:100%;
-min-height:100%;
-object-fit:cover;
-z-index:-2;
-}
-
-/* DARK OVERLAY */
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:-1;
-}
-
+/* BACKGROUND */
 body{
 color:white;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
 /* TOP BAR */
@@ -46,8 +31,8 @@ padding:15px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-bottom:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
@@ -62,7 +47,7 @@ font-size:12px;
 
 /* HERO */
 .hero{
-height:70vh;
+height:80vh;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -102,18 +87,11 @@ transform:scale(1.06);
 background:linear-gradient(135deg,#ef4444,#991b1b);
 }
 
-/* CONTAINER */
+/* SECTIONS */
 .container{
 max-width:1100px;
 margin:auto;
 padding:30px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-margin-top:20px;
 }
 
 .card{
@@ -122,18 +100,21 @@ border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
 border-radius:15px;
 padding:20px;
+margin-bottom:20px;
 }
 
-.stat{
-font-size:26px;
-font-weight:bold;
-color:#22c55e;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:15px;
 }
 
-.label{
-font-size:13px;
-opacity:0.8;
-margin-top:5px;
+.box{
+background:rgba(255,255,255,0.07);
+padding:15px;
+border-radius:12px;
+text-align:center;
 }
 
 /* FORM */
@@ -157,65 +138,43 @@ backdrop-filter:blur(10px);
 
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<video autoplay muted loop id="bg-video">
-  <source src="https://cdn.coverr.co/videos/coverr-soldiers-walking-in-smoke-7577/1080p.mp4" type="video/mp4">
-</video>
-
-<div class="overlay"></div>
-
 <!-- TOP BAR -->
 <div class="topbar">
-<div class="logo">⚔️ نظام المحارب المخضرم</div>
+<div class="logo">⚔️ المحارب المخضرم</div>
 <div class="status">🟢 ONLINE</div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 <div>
-<div class="title">نظام العمليات العسكري</div>
-<div class="subtitle">منصة تسجيل وإدارة احترافية</div>
+<div class="title">نظام عسكري احترافي</div>
+<div class="subtitle">منصة تسجيل وإدارة بأسلوب عمليات ميدانية</div>
 
-<a href="#dashboard" class="btn">لوحة التحكم</a>
-<a href="#register" class="btn">التسجيل</a>
+<a href="#register" class="btn">بدء التسجيل</a>
 <a href="https://t.me/ruuuseesuv" target="_blank" class="btn">تواصل معنا 📢</a>
+<a href="#info" class="btn">معلومات</a>
 
 </div>
 </section>
 
-<!-- DASHBOARD -->
-<div class="container" id="dashboard">
+<!-- CONTENT -->
+<div class="container">
+
+<!-- INFO -->
+<div class="card" id="info">
+<h2>🛡️ نظام المنصة</h2>
 
 <div class="grid">
-
-<div class="card">
-<div class="stat">LIVE</div>
-<div class="label">حالة النظام</div>
-</div>
-
-<div class="card">
-<div class="stat">SECURE</div>
-<div class="label">الحماية</div>
-</div>
-
-<div class="card">
-<div class="stat">FAST</div>
-<div class="label">الأداء</div>
-</div>
-
-<div class="card">
-<div class="stat">ACTIVE</div>
-<div class="label">الخدمة</div>
-</div>
-
+<div class="box">واجهة عسكرية</div>
+<div class="box">تسجيل آمن</div>
+<div class="box">إدارة بيانات</div>
+<div class="box">أداء سريع</div>
 </div>
 
 </div>
 
 <!-- FORM -->
-<div class="container" id="register">
-
-<div class="card">
+<div class="card" id="register">
 <h2>📋 استمارة التسجيل</h2>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe09873Fy1RAdO48UPyWjvMJ2R6r7mL8_NN7l3MK092sTnqvQ/viewform?embedded=true"></iframe>
@@ -224,7 +183,6 @@ backdrop-filter:blur(10px);
 
 </div>
 
-<!-- FOOTER -->
 <footer>
 © 2026 نظام المحارب المخضرم
 </footer>
