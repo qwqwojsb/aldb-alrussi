@@ -1,51 +1,181 @@
-<section class="hero">
-  <div class="overlay">
-    <h1>🐻 الدب الروسي</h1>
-    <h2>البداية نحو المستقبل</h2>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدب الروسي</title>
 
-    <p>
-      منصة متخصصة للتسجيل والمتابعة وتقديم المعلومات والخدمات
-      من خلال واجهة سهلة وسريعة وآمنة.
-    </p>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0b1220;
+color:white;
+}
 
-    <a href="#register" class="btn">سجل الآن</a>
-  </div>
-</section>
+/* الخلفية الرئيسية */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+padding:20px;
+}
 
-<section id="register" class="card">
-  <h2>استمارة التسجيل</h2>
+.logo{
+font-size:70px;
+font-weight:bold;
+}
 
-  <form>
-    <input type="text" placeholder="الاسم الكامل" required>
-    <input type="number" placeholder="العمر" required>
-    <input type="text" placeholder="رقم الهاتف" required>
-    <input type="text" placeholder="مكان الإقامة">
+.subtitle{
+font-size:22px;
+margin-top:10px;
+opacity:0.9;
+}
 
-    <label>إرفاق مستند تعريفي</label>
-    <input type="file" accept="image/*,.pdf">
+.btn{
+margin-top:25px;
+padding:15px 35px;
+background:#d62828;
+border:none;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
 
-    <textarea placeholder="ملاحظات إضافية"></textarea>
+.btn:hover{
+background:#a4161a;
+transform:scale(1.05);
+}
 
-    <button type="submit">إرسال الطلب</button>
-  </form>
-</section>
+/* المحتوى */
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
 
-<section class="card">
-  <h2>الأسئلة الشائعة</h2>
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
 
-  <details>
-    <summary>هل التسجيل مجاني؟</summary>
-    <p>نعم، التسجيل مجاني بالكامل.</p>
-  </details>
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+outline:none;
+}
 
-  <details>
-    <summary>كيف تتم متابعة الطلب؟</summary>
-    <p>سيتم التواصل بعد مراجعة البيانات المرسلة.</p>
-  </details>
+button.submit{
+width:100%;
+padding:15px;
+background:#1d4ed8;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:18px;
+}
 
-  <details>
-    <summary>هل يمكن تحديث البيانات لاحقاً؟</summary>
-    <p>نعم، يمكن تعديل البيانات عند الحاجة.</p>
-  </details>
-</section>
-``
+button.submit:hover{
+background:#2563eb;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.feature{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#050814;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- الهيرو -->
+<div class="hero">
+<div class="logo">🐻 الدب الروسي</div>
+<div class="subtitle">البداية نحو المستقبل</div>
+
+<a href="#register">
+<button class="btn">سجل الآن</button>
+</a>
+</div>
+
+<!-- المحتوى -->
+<div class="container">
+
+<div class="card" id="register">
+<h2>استمارة التسجيل</h2>
+
+<form action="https://formspree.io/f/xaybxxxx" method="POST">
+<input type="text" name="name" placeholder="الاسم الكامل" required>
+<input type="number" name="age" placeholder="العمر" required>
+<input type="text" name="phone" placeholder="رقم الهاتف" required>
+<input type="text" name="location" placeholder="مكان الإقامة">
+
+<label>رفع ملف (جواز / هوية)</label>
+<input type="file" name="file" accept="image/*,.pdf">
+
+<textarea name="message" placeholder="ملاحظات إضافية"></textarea>
+
+<button class="submit" type="submit">إرسال الطلب</button>
+</form>
+</div>
+
+<div class="card">
+<h2>مميزات التسجيل</h2>
+
+<div class="features">
+<div class="feature">سرعة المعالجة</div>
+<div class="feature">متابعة الطلب</div>
+<div class="feature">دعم مستمر</div>
+<div class="feature">تسجيل مجاني</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>معلومات</h2>
+<p>
+منصة الدب الروسي توفر نظام تسجيل منظم وسهل الاستخدام مع متابعة للطلبات بشكل احترافي.
+</p>
+</div>
+
+</div>
+
+<footer>
+مكتب البعد الآخر © 2026
+</footer>
+
+</body>
+</html>
