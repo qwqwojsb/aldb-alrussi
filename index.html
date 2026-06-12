@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>المحارب المخضرم</title>
+<title>⚔️ المحارب المخضرم</title>
 
 <style>
 *{
@@ -14,11 +14,11 @@ font-family:Tahoma, Arial;
 }
 
 body{
-background:#0a0f1c;
-color:white;
+background:#050814;
+color:#fff;
 }
 
-/* HERO BACKGROUND SOLDIER */
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -26,11 +26,10 @@ align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
-padding:20px;
 
 background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-url('https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1600&q=80');
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 }
@@ -39,11 +38,19 @@ background-position:center;
 z-index:2;
 }
 
+.badge{
+display:inline-block;
+padding:6px 12px;
+background:#dc2626;
+border-radius:20px;
+font-size:12px;
+margin-bottom:10px;
+}
+
 .title{
-font-size:55px;
+font-size:50px;
 font-weight:bold;
 margin-bottom:10px;
-letter-spacing:1px;
 }
 
 .subtitle{
@@ -55,53 +62,55 @@ margin-bottom:25px;
 /* BUTTONS */
 .btn{
 display:inline-block;
-margin:8px;
-padding:14px 26px;
-border-radius:12px;
+margin:6px;
+padding:14px 22px;
+border-radius:10px;
 border:none;
 cursor:pointer;
-font-size:16px;
+font-size:15px;
 color:white;
-background:linear-gradient(135deg,#ef4444,#b91c1c);
+background:linear-gradient(135deg,#dc2626,#7f1d1d);
 transition:0.3s;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
 text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
 }
 
 .btn:hover{
 transform:scale(1.08);
-background:linear-gradient(135deg,#ff4d4d,#7f1d1d);
+background:linear-gradient(135deg,#ef4444,#991b1b);
 }
 
-/* SECTIONS */
+/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
 padding:40px 20px;
 }
 
+/* CARDS */
 .card{
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-padding:25px;
+backdrop-filter:blur(10px);
 border-radius:15px;
+padding:25px;
 margin-bottom:20px;
 }
 
-/* FEATURES */
-.features{
+/* GRID */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 margin-top:15px;
 }
 
-.feature{
-background:rgba(255,255,255,0.08);
+.box{
+background:rgba(255,255,255,0.07);
 padding:15px;
 border-radius:12px;
 text-align:center;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 /* FORM */
@@ -116,7 +125,8 @@ border-radius:12px;
 footer{
 text-align:center;
 padding:20px;
-background:#050814;
+background:#02030a;
+margin-top:30px;
 }
 </style>
 </head>
@@ -128,12 +138,22 @@ background:#050814;
 
 <div class="hero-content">
 
-<div class="title">⚔️ المحارب المخضرم</div>
-<div class="subtitle">منصة احترافية للتسجيل وإدارة الطلبات</div>
+<div class="badge">TACTICAL SYSTEM ONLINE</div>
 
-<a href="#register" class="btn">ابدأ التسجيل</a>
-<a href="#info" class="btn">المعلومات</a>
-<a href="#contact" class="btn">تواصل معنا</a>
+<div class="title">⚔️ المحارب المخضرم</div>
+
+<div class="subtitle">
+نظام تسجيل وإدارة عمليات بأسلوب احترافي
+</div>
+
+<a href="#register" class="btn">بدء التسجيل</a>
+
+<!-- زر التلجرام -->
+<a href="https://t.me/yourchannel" target="_blank" class="btn">
+تواصل معنا 📢
+</a>
+
+<a href="#info" class="btn">معلومات النظام</a>
 
 </div>
 
@@ -143,20 +163,20 @@ background:#050814;
 <div class="container">
 
 <div class="card" id="register">
-<h2>استمارة التسجيل</h2>
+<h2>📋 استمارة التسجيل</h2>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe09873Fy1RAdO48UPyWjvMJ2R6r7mL8_NN7l3MK092sTnqvQ/viewform?embedded=true"></iframe>
 
 </div>
 
 <div class="card" id="info">
-<h2>مميزات المنصة</h2>
+<h2>🛡️ نظام المنصة</h2>
 
-<div class="features">
-<div class="feature">تصميم احترافي</div>
-<div class="feature">سرعة استجابة</div>
-<div class="feature">متابعة الطلبات</div>
-<div class="feature">نظام آمن</div>
+<div class="grid">
+<div class="box">تسجيل آمن</div>
+<div class="box">إدارة طلبات</div>
+<div class="box">واجهة احترافية</div>
+<div class="box">استجابة سريعة</div>
 </div>
 
 </div>
