@@ -1,84 +1,185 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الدب الروسي</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدب الروسي</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    header {
-      background: #1e3a8a;
-      padding: 20px;
-      font-size: 28px;
-      font-weight: bold;
-    }
+body{
+background:#0f172a;
+color:white;
+}
 
-    .container {
-      padding: 30px;
-    }
+header{
+background:linear-gradient(135deg,#1e3a8a,#dc2626);
+padding:60px 20px;
+text-align:center;
+}
 
-    input, textarea {
-      width: 80%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: none;
-    }
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
 
-    button {
-      padding: 10px 20px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+header p{
+font-size:20px;
+}
 
-    button:hover {
-      background: #1d4ed8;
-    }
+.container{
+max-width:900px;
+margin:auto;
+padding:30px 20px;
+}
 
-    footer {
-      margin-top: 30px;
-      padding: 10px;
-      background: #1e293b;
-    }
-  </style>
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+input,select,textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#2563eb;
+border:none;
+border-radius:10px;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.feature{
+background:#334155;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.faq-item{
+margin-bottom:15px;
+}
+
+.faq-item h3{
+margin-bottom:8px;
+color:#60a5fa;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+margin-top:30px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  الدب الروسي | البداية نحو المستقبل
+<h1>🐻 الدب الروسي</h1>
+<p>البداية نحو المستقبل</p>
 </header>
 
 <div class="container">
 
-  <h2>استمارة تسجيل</h2>
+<div class="card">
+<h2>استمارة التسجيل</h2>
 
-  <form>
-    <input type="text" placeholder="الاسم الكامل">
-    <input type="number" placeholder="العمر">
-    <input type="text" placeholder="رقم الهاتف">
-    <textarea placeholder="ملاحظات"></textarea>
-    <br>
-    <button type="button">إرسال</button>
-  </form>
+<form>
+<input type="text" placeholder="الاسم الكامل">
 
-  <h3>فوائد التسجيل</h3>
-  <p>الحصول على معلومات وخدمات ومتابعة مستمرة بشكل مجاني.</p>
+<input type="number" placeholder="العمر">
+
+<input type="text" placeholder="رقم الهاتف">
+
+<input type="text" placeholder="مكان الإقامة">
+
+<textarea rows="4" placeholder="ملاحظات إضافية"></textarea>
+
+<button type="submit">إرسال الطلب</button>
+</form>
+</div>
+
+<div class="card">
+<h2>مميزات التسجيل</h2>
+
+<div class="features">
+
+<div class="feature">
+سهولة التسجيل
+</div>
+
+<div class="feature">
+متابعة الطلب
+</div>
+
+<div class="feature">
+دعم مستمر
+</div>
+
+<div class="feature">
+تسجيل مجاني
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>الأسئلة الشائعة</h2>
+
+<div class="faq-item">
+<h3>هل التسجيل مجاني؟</h3>
+<p>نعم، التسجيل مجاني بالكامل.</p>
+</div>
+
+<div class="faq-item">
+<h3>كم يستغرق الرد؟</h3>
+<p>يتم التواصل معك بعد مراجعة الطلب.</p>
+</div>
+
+<div class="faq-item">
+<h3>هل يمكن تعديل البيانات؟</h3>
+<p>نعم، يمكن تحديث البيانات عند الحاجة.</p>
+</div>
+
+</div>
 
 </div>
 
 <footer>
-  مكتب البعد الآخر
+مكتب البعد الآخر © 2026
 </footer>
 
 </body>
