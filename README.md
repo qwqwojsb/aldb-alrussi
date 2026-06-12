@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>الدب الروسي</title>
+
   <style>
     body {
       font-family: Arial;
@@ -37,6 +38,17 @@
       color: white;
       border: none;
       border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+      background: #1e293b;
     }
   </style>
 </head>
@@ -48,6 +60,7 @@
 </header>
 
 <div class="container">
+
   <h2>استمارة تسجيل</h2>
 
   <form>
@@ -55,11 +68,13 @@
     <input type="number" placeholder="العمر">
     <input type="text" placeholder="رقم الهاتف">
     <textarea placeholder="ملاحظات"></textarea>
+    <br>
     <button type="button">إرسال</button>
   </form>
 
   <h3>فوائد التسجيل</h3>
-  <p>الحصول على معلومات وخدمات ومتابعة مستمرة.</p>
+  <p>الحصول على معلومات وخدمات ومتابعة مستمرة بشكل مجاني.</p>
+
 </div>
 
 <footer>
