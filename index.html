@@ -1,14 +1,150 @@
-<div class="card" id="register">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المحارب المخضرم</title>
 
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0a0f1c;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1549877452-9c387954fbc2?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.title{
+font-size:45px;
+font-weight:bold;
+}
+
+.subtitle{
+font-size:18px;
+opacity:0.8;
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#d62828;
+border:none;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#a4161a;
+transform:scale(1.05);
+}
+
+/* CONTAINER */
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.feature{
+background:rgba(255,255,255,0.08);
+padding:15px;
+border-radius:10px;
+text-align:center;
+}
+
+/* FORM */
+iframe{
+width:100%;
+height:900px;
+border:none;
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#050814;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="title">🐻 المحارب المخضرم</div>
+<div class="subtitle">البداية نحو المستقبل</div>
+
+<a href="#register" class="btn">سجل الآن</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<!-- FORM -->
+<div class="card" id="register">
 <h2>استمارة التسجيل</h2>
 
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLSe09873Fy1RAdO48UPyWjvMJ2R6r7mL8_NN7l3MK092sTnqvQ/viewform?embedded=true"
-width="100%"
-height="900"
-frameborder="0"
-marginheight="0"
-marginwidth="0">
-</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe09873Fy1RAdO48UPyWjvMJ2R6r7mL8_NN7l3MK092sTnqvQ/viewform?embedded=true"></iframe>
 
 </div>
+
+<!-- FEATURES -->
+<div class="card">
+<h2>مميزات التسجيل</h2>
+
+<div class="features">
+<div class="feature">تسجيل سريع</div>
+<div class="feature">متابعة الطلب</div>
+<div class="feature">دعم مستمر</div>
+<div class="feature">واجهة احترافية</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+جميع الحقوق محفوظة © 2026
+</footer>
+
+</body>
+</html>
