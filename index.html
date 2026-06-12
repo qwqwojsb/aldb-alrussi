@@ -1,177 +1,51 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الدب الروسي</title>
+<section class="hero">
+  <div class="overlay">
+    <h1>🐻 الدب الروسي</h1>
+    <h2>البداية نحو المستقبل</h2>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Tahoma, Arial, sans-serif;
-}
+    <p>
+      منصة متخصصة للتسجيل والمتابعة وتقديم المعلومات والخدمات
+      من خلال واجهة سهلة وسريعة وآمنة.
+    </p>
 
-body{
-background:#0f172a;
-color:white;
-line-height:1.8;
-}
+    <a href="#register" class="btn">سجل الآن</a>
+  </div>
+</section>
 
-header{
-background:linear-gradient(135deg,#1e3a8a,#b91c1c);
-padding:70px 20px;
-text-align:center;
-}
+<section id="register" class="card">
+  <h2>استمارة التسجيل</h2>
 
-header h1{
-font-size:48px;
-margin-bottom:10px;
-}
+  <form>
+    <input type="text" placeholder="الاسم الكامل" required>
+    <input type="number" placeholder="العمر" required>
+    <input type="text" placeholder="رقم الهاتف" required>
+    <input type="text" placeholder="مكان الإقامة">
 
-header p{
-font-size:22px;
-}
+    <label>إرفاق مستند تعريفي</label>
+    <input type="file" accept="image/*,.pdf">
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:30px 20px;
-}
+    <textarea placeholder="ملاحظات إضافية"></textarea>
 
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-margin-bottom:25px;
-box-shadow:0 0 15px rgba(0,0,0,.25);
-}
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
 
-h2{
-margin-bottom:20px;
-}
+<section class="card">
+  <h2>الأسئلة الشائعة</h2>
 
-input,textarea{
-width:100%;
-padding:14px;
-margin-bottom:15px;
-border:none;
-border-radius:10px;
-font-size:16px;
-}
+  <details>
+    <summary>هل التسجيل مجاني؟</summary>
+    <p>نعم، التسجيل مجاني بالكامل.</p>
+  </details>
 
-button{
-width:100%;
-padding:15px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-}
+  <details>
+    <summary>كيف تتم متابعة الطلب؟</summary>
+    <p>سيتم التواصل بعد مراجعة البيانات المرسلة.</p>
+  </details>
 
-button:hover{
-background:#1d4ed8;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
-.feature{
-background:#334155;
-padding:20px;
-border-radius:12px;
-text-align:center;
-}
-
-.faq{
-margin-top:10px;
-}
-
-.faq h3{
-color:#60a5fa;
-margin-bottom:5px;
-}
-
-footer{
-background:#111827;
-padding:20px;
-text-align:center;
-margin-top:30px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>🐻 الدب الروسي</h1>
-<p>البداية نحو المستقبل</p>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h2>استمارة التسجيل</h2>
-
-<form>
-<input type="text" placeholder="الاسم الكامل">
-
-<input type="number" placeholder="العمر">
-
-<input type="text" placeholder="رقم الهاتف">
-
-<input type="text" placeholder="مكان الإقامة">
-
-<textarea rows="4" placeholder="ملاحظات إضافية"></textarea>
-
-<button type="submit">إرسال الطلب</button>
-</form>
-
-</div>
-
-<div class="card">
-<h2>مميزات التسجيل</h2>
-
-<div class="features">
-<div class="feature">تسجيل مجاني</div>
-<div class="feature">متابعة الطلب</div>
-<div class="feature">دعم مستمر</div>
-<div class="feature">إجراءات بسيطة</div>
-</div>
-
-</div>
-
-<div class="card">
-<h2>الأسئلة الشائعة</h2>
-
-<div class="faq">
-<h3>هل التسجيل مجاني؟</h3>
-<p>نعم، التسجيل مجاني بالكامل.</p>
-</div>
-
-<div class="faq">
-<h3>كم يستغرق الرد؟</h3>
-<p>سيتم التواصل بعد مراجعة الطلب.</p>
-</div>
-
-<div class="faq">
-<h3>هل يمكن تعديل البيانات؟</h3>
-<p>نعم، يمكن تحديث البيانات عند الحاجة.</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-مكتب البعد الآخر © 2026
-</footer>
-
-</body>
-</html>
+  <details>
+    <summary>هل يمكن تحديث البيانات لاحقاً؟</summary>
+    <p>نعم، يمكن تعديل البيانات عند الحاجة.</p>
+  </details>
+</section>
+``
