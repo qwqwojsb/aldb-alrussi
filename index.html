@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚔️ المحارب المخضرم</title>
+<title>⚔️ نظام المحارب المخضرم</title>
 
 <style>
 *{
@@ -18,9 +18,29 @@ background:#050814;
 color:white;
 }
 
+/* TOP BAR */
+.topbar{
+background:#0b1220;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+font-size:18px;
+font-weight:bold;
+}
+
+.status{
+color:#22c55e;
+font-size:12px;
+}
+
 /* HERO */
 .hero{
-height:100vh;
+height:70vh;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -34,89 +54,75 @@ background-size:cover;
 background-position:center;
 }
 
-.hero-content{
-z-index:2;
-}
-
-.badge{
-display:inline-block;
-padding:6px 12px;
-background:#dc2626;
-border-radius:20px;
-font-size:12px;
-margin-bottom:10px;
-}
-
 .title{
-font-size:52px;
+font-size:48px;
 font-weight:bold;
 margin-bottom:10px;
 }
 
 .subtitle{
-font-size:18px;
-opacity:0.85;
-margin-bottom:25px;
+font-size:16px;
+opacity:0.8;
+margin-bottom:20px;
 }
 
 /* BUTTONS */
 .btn{
 display:inline-block;
 margin:6px;
-padding:14px 22px;
+padding:12px 18px;
 border-radius:10px;
 border:none;
 cursor:pointer;
-font-size:15px;
+font-size:14px;
 color:white;
 background:linear-gradient(135deg,#dc2626,#7f1d1d);
 transition:0.3s;
 text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.5);
 }
 
 .btn:hover{
-transform:scale(1.08);
-background:linear-gradient(135deg,#ef4444,#991b1b);
+transform:scale(1.06);
 }
 
-/* CONTAINER */
+/* DASHBOARD */
 .container{
 max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:30px 20px;
 }
 
-/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
 .card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
 border-radius:15px;
-padding:25px;
-margin-bottom:20px;
+padding:20px;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:15px;
+.stat{
+font-size:26px;
+font-weight:bold;
+color:#22c55e;
 }
 
-.box{
-background:rgba(255,255,255,0.07);
-padding:15px;
-border-radius:12px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.08);
+.label{
+font-size:13px;
+opacity:0.8;
+margin-top:5px;
 }
 
 /* FORM */
 iframe{
 width:100%;
-height:850px;
+height:800px;
 border:none;
 border-radius:12px;
 }
@@ -133,56 +139,78 @@ margin-top:30px;
 
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+<div class="logo">⚔️ نظام المحارب المخضرم</div>
+<div class="status">🟢 ONLINE</div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
+<div>
+<div class="title">نظام العمليات العسكري</div>
+<div class="subtitle">إدارة التسجيلات والمتابعة بشكل احترافي</div>
 
-<div class="hero-content">
+<a href="#dashboard" class="btn">لوحة التحكم</a>
+<a href="#register" class="btn">التسجيل</a>
+<a href="https://t.me/ruuuseesuv" target="_blank" class="btn">تواصل معنا 📢</a>
 
-<div class="badge">TACTICAL SYSTEM ONLINE</div>
+</div>
+</section>
 
-<div class="title">⚔️ المحارب المخضرم</div>
+<!-- DASHBOARD -->
+<div class="container" id="dashboard">
 
-<div class="subtitle">نظام تسجيل وإدارة احترافي</div>
+<div class="grid">
 
-<a href="#register" class="btn">بدء التسجيل</a>
+<div class="card">
+<div class="stat" id="users">0</div>
+<div class="label">عدد المسجلين (تجريبي)</div>
+</div>
 
-<a href="https://t.me/ruuuseesuv" target="_blank" class="btn">
-تواصل معنا 📢
-</a>
+<div class="card">
+<div class="stat">ACTIVE</div>
+<div class="label">حالة النظام</div>
+</div>
 
-<a href="#info" class="btn">معلومات النظام</a>
+<div class="card">
+<div class="stat">SECURE</div>
+<div class="label">الحماية</div>
+</div>
+
+<div class="card">
+<div class="stat">FAST</div>
+<div class="label">الأداء</div>
+</div>
 
 </div>
 
-</section>
+</div>
 
-<!-- CONTENT -->
-<div class="container">
+<!-- FORM -->
+<div class="container" id="register">
 
-<div class="card" id="register">
+<div class="card">
 <h2>📋 استمارة التسجيل</h2>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe09873Fy1RAdO48UPyWjvMJ2R6r7mL8_NN7l3MK092sTnqvQ/viewform?embedded=true"></iframe>
 
 </div>
 
-<div class="card" id="info">
-<h2>🛡️ نظام المنصة</h2>
-
-<div class="grid">
-<div class="box">تسجيل آمن</div>
-<div class="box">واجهة احترافية</div>
-<div class="box">متابعة الطلبات</div>
-<div class="box">استجابة سريعة</div>
-</div>
-
-</div>
-
 </div>
 
 <footer>
-© 2026 المحارب المخضرم - جميع الحقوق محفوظة
+© 2026 نظام المحارب المخضرم
 </footer>
+
+<script>
+// عدّاد تجريبي
+let count = 0;
+setInterval(()=>{
+count++;
+document.getElementById("users").innerText = count;
+},3000);
+</script>
 
 </body>
 </html>
